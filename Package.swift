@@ -13,6 +13,9 @@ let package = Package(
         .executable(
             name: "day2",
             targets: ["day2"]),
+        .executable(
+            name: "day3",
+            targets: ["day3"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -39,5 +42,15 @@ let package = Package(
         .testTarget(
             name: "day2Tests",
             dependencies: ["day2lib"]),
+        .target(
+            name: "day3",
+            dependencies: ["day3lib"]),
+
+        .target(
+            name: "day3lib",
+            dependencies: []),
+        .testTarget(
+            name: "day3Tests",
+            dependencies: ["day3lib"]),
     ]
 )
