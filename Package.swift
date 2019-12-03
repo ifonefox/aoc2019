@@ -7,8 +7,8 @@ let package = Package(
     name: "aoc2019",
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "aoc2019",
+        .executable(
+            name: "day1",
             targets: ["day1"]),
     ],
     dependencies: [
@@ -20,9 +20,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "day1",
+            dependencies: ["day1lib"]),
+        .target(
+            name: "day1lib",
             dependencies: []),
         .testTarget(
             name: "day1Tests",
-            dependencies: ["day1"]),
+            dependencies: ["day1lib"]),
     ]
 )
