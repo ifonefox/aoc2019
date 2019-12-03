@@ -1,12 +1,12 @@
 import XCTest
-@testable import aoc2019
+@testable import day1
 
-final class aoc2019Tests: XCTestCase {
+final class day1Tests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(aoc2019().text, "Hello, World!")
+        XCTAssertEqual(day1().text, "Hello, World!")
     }
 
     static var allTests = [

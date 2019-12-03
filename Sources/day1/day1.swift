@@ -1,3 +1,3 @@
-struct aoc2019 {
+struct day1 {
     var text = "Hello, World!"
 }
