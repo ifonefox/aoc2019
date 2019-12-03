@@ -16,7 +16,7 @@ public struct Part1 {
     var opcodes = input;
     var position = 0;
     while(position < input.count){
-      print(position)
+      //print(position)
       guard let output = cycle(opcodes, at: position) else {
         return opcodes
       }

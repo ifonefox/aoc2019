@@ -11,3 +11,6 @@ var newInput = input
 newInput[1] = 12
 newInput[2] = 2
 print(Part1.run(newInput)[0])
+print(Part2.run(input,goal:19690720))
+
+
