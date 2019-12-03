@@ -70,3 +70,5 @@ fastlane/test_output
 
 input.txt
 input.swift
+.DS_Store
+.swiftpm
