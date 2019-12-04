@@ -24,8 +24,15 @@ public struct Line:Equatable{
         return nil
     }
 }
-struct Point:Equatable {
+class Point:Equatable {
+  static func == (lhs: Point, rhs: Point) -> Bool {
+    return lhs.x == rhs.x && lhs.y == rhs.y
+  }
     var x,y:Int
+  init(x:Int, y:Int) {
+    self.x = x
+    self.y = y
+  }
     func nextPath(_ info:Instruction) -> (Point, Line){
         switch info.dir {
         case .Up:
