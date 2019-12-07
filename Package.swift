@@ -17,8 +17,11 @@ let package = Package(
       name: "day3",
       targets: ["day3"]),
     .executable(
-      name: "day4",
-      targets: ["day4"]),
+      name: "day5",
+      targets: ["day5"]),
+    .executable(
+      name: "day6",
+      targets: ["day6"]),
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
@@ -55,13 +58,19 @@ let package = Package(
       name: "day3Tests",
       dependencies: ["day3lib"]),
     .target(
-      name: "day4",
-      dependencies: ["day4lib"]),
+      name: "day5",
+      dependencies: ["IntcodeComp"]),
+    .testTarget(
+      name: "day5Tests",
+      dependencies: ["IntcodeComp"]),
     .target(
-      name: "day4lib",
+      name: "day6",
+      dependencies: ["day6lib"]),
+    .target(
+      name: "day6lib",
       dependencies: []),
     .testTarget(
-      name: "day4Tests",
-      dependencies: ["day4lib"]),
+      name: "day6Tests",
+      dependencies: ["day6lib"]),
   ]
 )
