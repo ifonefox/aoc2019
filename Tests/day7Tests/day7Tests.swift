@@ -1,7 +1,7 @@
 import XCTest
-@testable import day0lib
+@testable import day7lib
 
-final class day0Tests: XCTestCase {
+final class day7Tests: XCTestCase {
   func testParse() {
     XCTAssertEqual(0,0);
   }
