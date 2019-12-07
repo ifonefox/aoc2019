@@ -26,7 +26,7 @@ public class IntcodeComp {
   }
   public func registerInstruction(_ inst:Instruction) {
     self.instructions[inst.code] = inst
-}
+  }
   public func registerInstructions(_ instructionList:[Instruction]) {
     instructionList.forEach { i in
       self.registerInstruction(i)
@@ -58,8 +58,8 @@ public class IntcodeComp {
     let paramsStart = self.state.instructionPointer + 1
     let params:[Int] = Array(self.state.memory[paramsStart..<(paramsStart + instr.parameters)])
     //print(fullOpcode, params)
-
-
+    
+    
     self.state = instr.run(params, modes, state)
     if(!instr.overrideInstructionPointer && !self.state.halted) {
       self.state.instructionPointer += instr.parameters + 1

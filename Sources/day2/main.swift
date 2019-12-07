@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Sean Brody on 12/2/19.
-//
-
 import IntcodeComp
 var part1Input = input
 part1Input[1] = 12

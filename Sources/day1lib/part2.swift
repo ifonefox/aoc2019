@@ -1,6 +1,5 @@
 public class Part2 {
   var fuel: [Int]
-  
   init(_ fuel: [Int]) {
     self.fuel = fuel;
   }
