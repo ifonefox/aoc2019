@@ -2,6 +2,7 @@ public struct State {
   public var memory:[Int]
   public var halted = false
   public var broke = false
+  public var waiting = false
   var instructionPointer:Int
   public var input:[Int] = []
   public var output:[Int] = []
@@ -66,7 +67,8 @@ public class IntcodeComp {
     }
   }
   public func run(){
-    while !self.state.halted {
+    self.state.waiting = false
+    while !self.state.halted && !self.state.waiting {
       self.cycle()
     }
   }

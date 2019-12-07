@@ -31,9 +31,14 @@ public struct SharedInstructions {
     return state
   }
   //Day 5 Part 1
-  public static let writeFromInput = Instruction(code: 3, parameters: 1) {(params, modes, oldState) -> State in
+  public static let writeFromInput = Instruction(code: 3, parameters: 1, overrideInstructionPointer: true) {(params, modes, oldState) -> State in
     var state = oldState
-    state.memory[params[0]] = state.input.removeFirst()
+    if(state.input.count == 0) {
+      state.waiting = true
+    } else {
+      state.memory[params[0]] = state.input.removeFirst()
+      state.instructionPointer += 2
+    }
     return state
   }
   public static let readToOutput = Instruction(code: 4, parameters: 1) {(params, modes, oldState) -> State in

@@ -80,7 +80,7 @@ let package = Package(
       dependencies: ["day7lib"]),
     .target(
       name: "day7lib",
-      dependencies: []),
+      dependencies: ["IntcodeComp"]),
     .testTarget(
       name: "day7Tests",
       dependencies: ["day7lib"]),
