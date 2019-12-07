@@ -28,6 +28,9 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
+            name: "IntcodeComp",
+            dependencies: []),
+        .target(
             name: "day1",
             dependencies: ["day1lib"]),
         .target(
@@ -38,13 +41,10 @@ let package = Package(
             dependencies: ["day1lib"]),
         .target(
             name: "day2",
-            dependencies: ["day2lib"]),
-        .target(
-            name: "day2lib",
-            dependencies: []),
+            dependencies: ["IntcodeComp"]),
         .testTarget(
             name: "day2Tests",
-            dependencies: ["day2lib"]),
+            dependencies: ["IntcodeComp"]),
         .target(
             name: "day3",
             dependencies: ["day3lib"]),
